@@ -43,6 +43,12 @@ const routes = [
     name: 'find',
     component: () => import('../views/user/FindView.vue')
   },
+  //catch all 404
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: () => import('../views/NotFoundView.vue'),
+  }
 ]
 
 const router = createRouter({
