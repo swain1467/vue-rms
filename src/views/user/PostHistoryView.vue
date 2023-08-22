@@ -7,7 +7,7 @@
 import Home from '@/components/Home.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'PostHistoryView',
   components: {
     Home
   }

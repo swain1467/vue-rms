@@ -1,15 +1,15 @@
 <template>
-    <Home/>
+    <SignIn/>
 </template>
 
 <script>
 // @ is an alias to /src
-import Home from '@/components/Home.vue'
+import SignIn from '@/components/SignIn.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'SignInView',
   components: {
-    Home
+    SignIn
   }
 }
 </script>
