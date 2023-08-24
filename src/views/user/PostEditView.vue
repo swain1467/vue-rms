@@ -1,15 +1,15 @@
 <template>
-    <Find/>
+    <PostEdit/>
 </template>
 
 <script>
 // @ is an alias to /src
-import Find from '@/components/user/Find.vue'
+import PostEdit from '@/components/user/PostEdit.vue'
 
 export default {
-  name: 'FindView',
+  name: 'PostEditView',
   components: {
-    Find
+    PostEdit
   }
 }
 </script>

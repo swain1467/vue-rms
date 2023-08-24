@@ -50,19 +50,5 @@ export default {
 }
 </script>
 
-<style scoped>
-.card{
-  margin-top: 10%;
-  height: 120px;
-  padding-top: 50px;
-  border-radius: 5% 5%;
-}
-.card:hover {
-    -ms-transform: scale(0.8);
-    /* IE 9 */
-    -webkit-transform: scale(0.8);
-    /* Safari 3-8 */
-    transform: scale(0.8);
-    transition: 0.5s;
-}
+<style>
 </style>

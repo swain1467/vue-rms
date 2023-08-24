@@ -16,7 +16,7 @@
         <h4><router-link :to="{name: 'find'}">Find</router-link></h4>
         <h4><router-link :to="{name: 'post'}">Post</router-link></h4>
         <h4><router-link :to="{name: 'post_history'}">Post History</router-link></h4>
-        <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'user_dashboard'}">Admin Dashboard</router-link></h4>
+        <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'admin_dashboard'}">Admin Dashboard</router-link></h4>
     </div>
 </template>
 
@@ -33,23 +33,26 @@ export default {
     },
 
     mounted() { 
-      this.user_name = JSON.parse(localStorage.getItem('user_name'))
-      this.user_type = JSON.parse(localStorage.getItem('user_type'))
-        this.token = JSON.parse(localStorage.getItem('token'))
-        const config = {
-            headers: { Authorization: `Bearer ${this.token}` }
-            };
-            axios.get( 
-                'auth/Me',
-                config
-        ).then(
-                res => {
+    this.user_name = JSON.parse(localStorage.getItem('user_name'))
+    this.user_type = JSON.parse(localStorage.getItem('user_type'))
+    this.token = JSON.parse(localStorage.getItem('token'))
+    const config = {
+        headers: { Authorization: `Bearer ${this.token}` }
+        };
+    axios.get( 
+        'auth/Me',
+        config
+    ).then(
+            res => {
+                if(res.data != '1'){
+                    this.$router.push({ name: 'sign_in'})
                 }
-        ).catch(
-                err => {
-                this.$router.push({ name: 'sign_in'})
-                }
-        );
+            }
+    ).catch(
+            err => {
+            this.$router.push({ name: 'sign_in'})
+            }
+    );
     },
 
     methods:{

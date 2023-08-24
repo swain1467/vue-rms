@@ -1,13 +1,36 @@
 <template>
 <Nav/>
 <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card bg-primary">
+            <router-link :to="{name: 'find'}">
+                <b class="text-white">
+                    <i class = "fa fa-home"></i><br>
+                    <span class = "nav-item">Find A House</span><br>
+                    <span class = "nav-item">Or</span><br>
+                    <i class = "fa fa-building"></i><br>
+                    <span class = "nav-item">Commercial Place</span><br>
+                </b>
+            </router-link>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card bg-success">
+            <router-link :to="{name: 'post'}">
+                <b class="text-white">
+                    <i class = "fa fa-home"></i><br>
+                    <span class = "nav-item">Post A House</span><br>
+                    <span class = "nav-item">Or</span><br>
+                    <i class = "fa fa-building"></i><br>
+                    <span class = "nav-item">Commercial Place</span><br>
+                </b>
+            </router-link>
+        </div>
     </div>
 </div>
 </template>
 
 <script>
-import axios from 'axios'
 import Nav from '@/components/Nav.vue'
 
 export default {

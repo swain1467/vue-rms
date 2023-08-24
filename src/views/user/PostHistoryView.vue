@@ -1,15 +1,15 @@
 <template>
-    <Home/>
+    <PostHistory/>
 </template>
 
 <script>
 // @ is an alias to /src
-import Home from '@/components/Home.vue'
+import PostHistory from '@/components/user/PostHistory.vue'
 
 export default {
   name: 'PostHistoryView',
   components: {
-    Home
+    PostHistory
   }
 }
 </script>

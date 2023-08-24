@@ -39,9 +39,20 @@ const routes = [
     component: () => import('../views/user/PostHistoryView.vue')
   },
   {
+    path: '/PostEdit/:id',
+    name: 'post_edit',
+    component: () => import('../views/user/PostEditView.vue'),
+    params: true
+  },
+  {
     path: '/Find',
     name: 'find',
     component: () => import('../views/user/FindView.vue')
+  },
+  {
+    path: '/AdminDashboard',
+    name: 'admin_dashboard',
+    component: () => import('../views/admin/AdminDashboardView.vue')
   },
   //catch all 404
   {
