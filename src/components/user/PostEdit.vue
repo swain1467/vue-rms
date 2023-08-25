@@ -232,7 +232,7 @@ methods: {
                     }
                 );
         },
-        //Save post property
+        //Delete post property
         deletePost(){
             let text = 'Are you sure to delete ?'
             if (confirm(text) == true) {

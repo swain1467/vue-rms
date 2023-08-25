@@ -17,6 +17,10 @@
         <h4><router-link :to="{name: 'post'}">Post</router-link></h4>
         <h4><router-link :to="{name: 'post_history'}">Post History</router-link></h4>
         <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'admin_dashboard'}">Admin Dashboard</router-link></h4>
+        <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'setup'}">Setup</router-link></h4>
+        <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'transition'}">Transition</router-link></h4>
+        <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'active_users'}">Active Users List</router-link></h4>
+        <h4 v-if="user_type === 'ADMIN'"><router-link :to="{name: 'black_listed_users'}">Black Listed Users List</router-link></h4>
     </div>
 </template>
 

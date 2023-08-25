@@ -59,7 +59,7 @@ background: #aaa;
   color: #fff;
 }
 .action-btn {
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 .card{

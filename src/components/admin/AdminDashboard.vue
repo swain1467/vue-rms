@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
         <div class="card bg-primary">
-            <router-link :to="{name: 'find'}">
+            <router-link :to="{name: 'active_users'}">
                 <b class="text-white">
                     <i class = "fa fa-users"></i><br>
 					<span class = "text-item">Active Users List</span>
@@ -13,7 +13,7 @@
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
         <div class="card bg-danger">
-            <router-link :to="{name: 'find'}">
+            <router-link :to="{name: 'black_listed_users'}">
                 <b class="text-white">
                     <i class = "fa fa-users"></i><br>
 					<span class = "text-item">Black Listed Users List</span>
@@ -23,7 +23,7 @@
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
         <div class="card bg-success">
-            <router-link :to="{name: 'find'}">
+            <router-link :to="{name: 'setup'}">
                 <b class="text-white">
                     <i class = "fa fa-gear"></i><br>
 					<span class = "text-item">Setup</span>
@@ -33,7 +33,7 @@
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
         <div class="card bg-dark">
-            <router-link :to="{name: 'find'}">
+            <router-link :to="{name: 'transition'}">
                 <b class="text-white">
                     <i class = "fa fa-tasks"></i><br>
 					<span class = "text-item">Trannsition</span>
@@ -46,6 +46,7 @@
 
 <script>
 import Nav from '@/components/Nav.vue'
+import isAdmin from '../../composables/isAdmin.js'
 
 export default {
     components:{
@@ -62,14 +63,10 @@ export default {
     },
 
     mounted() { 
-      this.user_name = JSON.parse(localStorage.getItem('user_name'))
-      this.user_id = JSON.parse(localStorage.getItem('user_id'))
-      this.user_name = JSON.parse(localStorage.getItem('user_name'))
+        if(isAdmin() == 0){
+            this.$router.push({ name: 'sign_in'})
+        }
     },
-
-    methods:{
-        
-    }
 }
 </script>
 
